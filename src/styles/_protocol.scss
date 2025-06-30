@@ -1,0 +1,40 @@
+.protocol {
+  background: #0853e8;
+  padding: 26px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: -2px;
+  }
+  &__subtitle {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 130%;
+    margin: 24px 0;
+    opacity: 0.8;
+  }
+  &__text {
+    color: #fff;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 130%;
+    opacity: 0.8;
+  }
+  img {
+    mix-blend-mode: lighten;
+  }
+  &__left {
+    max-width: 641px;
+    width: 100%;
+  }
+}

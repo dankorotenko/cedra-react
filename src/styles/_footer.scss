@@ -1,0 +1,38 @@
+.footer {
+  padding: 24px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  &__404 {
+    background: #010f3f;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: auto;
+    margin-top: 0;
+  }
+  div {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: -0.48px;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    a {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 110%;
+      letter-spacing: -0.48px;
+      text-decoration: none;
+    }
+  }
+}

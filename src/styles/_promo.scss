@@ -1,0 +1,61 @@
+.promo {
+  padding: 435px 0 345px 0;
+  background-image: url("../images/promo.png");
+  background-position: calc(100% + 100px) center;
+  background-repeat: no-repeat;
+  background-color: #edf6fa;
+  &__wrapper {
+    max-width: 750px;
+  }
+  &__button {
+    position: relative;
+    &:hover::after {
+      opacity: 1;
+      color: #fff;
+      transition: 0.2s ease-in-out;
+    }
+    &:hover {
+      // color: transparent;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  h1 {
+    color: #030a23;
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 100%;
+    letter-spacing: -4px;
+    span {
+      color: #0853e8;
+      font-size: 80px;
+      font-weight: 200;
+      line-height: 100%;
+      letter-spacing: -4px;
+    }
+  }
+  h2 {
+    color: #2f2f2f;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: -0.64px;
+    margin: 32px 0;
+  }
+  h3 {
+    display: none;
+  }
+  button {
+    width: 114px;
+    height: 48px;
+    border-radius: 4px;
+    background: #0853e8;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.259px;
+    border: 1px solid #0853e8;
+    outline: none;
+  }
+}

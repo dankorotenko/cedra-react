@@ -1,0 +1,192 @@
+.join {
+  background-color: #edf6fa;
+  padding: 112px 0 240px 0;
+  background-image: url("../images/join.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  &__right {
+    max-width: 883px;
+    width: 100%;
+    margin-left: auto;
+  }
+  &__title {
+    color: #010f3f;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: -2px;
+    margin: 30px 0;
+  }
+  &__subtitle {
+    color: #303d64;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+    opacity: 0.8;
+  }
+  &__wrapper {
+    margin-top: 32px;
+    display: flex;
+  }
+  &__block {
+    height: 450px;
+    border-radius: 10px;
+    padding-top: 290px;
+    padding: 290px 16px 24px 16px;
+    position: relative;
+    overflow: hidden;
+    &_1 {
+      width: 314px;
+      // background: #0853e8;
+      transition: 0.2s ease-in-out;
+      .join__block_outer {
+        width: 325px;
+        position: absolute;
+        top: 0;
+        left: -150px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      .join__block_inner {
+        width: 274px;
+        position: absolute;
+        top: 23px;
+        left: -121px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      &:hover {
+        background: #0853e8;
+        transition: 0.2s ease-in-out;
+        .join__block_outer {
+          transform: rotate(-90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+        .join__block_inner {
+          transform: rotate(90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+      }
+    }
+    &_2 {
+      width: 284px;
+      // background: #0853e8;
+      transition: 0.2s ease-in-out;
+      .join__block_outer {
+        width: 286px;
+        position: absolute;
+        top: 8px;
+        left: -112px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      .join__block_inner {
+        width: 192px;
+        position: absolute;
+        top: 41px;
+        left: -65px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      &:hover {
+        background: #0853e8;
+        transition: 0.2s ease-in-out;
+        .join__block_outer {
+          transform: rotate(-90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+        .join__block_inner {
+          transform: rotate(90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+      }
+    }
+    &_3 {
+      width: 284px;
+      transition: 0.2s ease-in-out;
+      .join__block_outer {
+        width: 275px;
+        position: absolute;
+        top: 15px;
+        left: -90px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      .join__block_inner {
+        width: 206px;
+        position: absolute;
+        top: 49px;
+        left: -54px;
+        filter: invert(1);
+        transition: 1s linear;
+      }
+      &:hover {
+        background: #0853e8;
+        transition: 0.2s ease-in-out;
+        .join__block_outer {
+          transform: rotate(-90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+        .join__block_inner {
+          transform: rotate(90deg);
+          opacity: 1;
+          transition: 1s linear;
+        }
+      }
+    }
+    &_title {
+      color: #010f3f;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: -1.28px;
+      margin-bottom: 24px;
+    }
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      margin-top: 16px;
+      &_title {
+        color: #303d65;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 32px;
+      }
+    }
+    div {
+      transition: 0.2s ease-in-out;
+    }
+    .join__block_outer,
+    .join__block_inner {
+      opacity: 0;
+      transition: 0s;
+    }
+    svg {
+      path {
+        transition: 0.2s ease-in-out;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 34px 55.1px -22px rgba(0, 0, 0, 0.1);
+      * {
+        color: #fff;
+        transition: 0.2s ease-in-out;
+      }
+      svg {
+        path {
+          stroke: #fff;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
