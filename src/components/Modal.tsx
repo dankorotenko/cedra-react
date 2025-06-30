@@ -1,8 +1,14 @@
-export const Modal = () => {
+export const Modal = ({
+  isModalOpen,
+  setIsModalOpen,
+}: {
+  isModalOpen: boolean;
+  setIsModalOpen: (isModalOpen: boolean) => void;
+}) => {
   return (
-    <div className="modal">
+    <div className={`modal ${isModalOpen ? "modal__active" : ""}`}>
       <div className="modal__wrapper">
-        <button className="modal__close">
+        <button className="modal__close" onClick={() => setIsModalOpen(false)}>
           <img src="./images/closeModal.svg" alt="close" />
         </button>
         <div className="modal__title">Join the Cedra Community!</div>

@@ -1,4 +1,8 @@
-export const Public = () => {
+export const Public = ({
+  setIsModalOpen,
+}: {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+}) => {
   return (
     <section className="public">
       <div className="container">
@@ -29,7 +33,10 @@ export const Public = () => {
               <div className="public__text">True Decentralization</div>
             </div>
           </div>
-          <button className="jelly-button promo__button invitation">
+          <button
+            className="jelly-button promo__button invitation"
+            onClick={() => setIsModalOpen(true)}
+          >
             Join The Ecosystem
           </button>
         </div>

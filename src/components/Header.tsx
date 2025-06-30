@@ -1,12 +1,24 @@
-export const Header = () => {
+import { useState } from "react";
+
+export const Header = ({
+  setIsModalOpen,
+}: {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="header">
       <div className="header__container">
         <img src="./images/logo.svg" alt="logo" />
-        <div className="header__menu">
+        <div
+          className={`header__menu ${isMenuOpen ? "header__menu_active" : ""}`}
+        >
           <div></div>
           <div className="header__menu_header">
-            <button className="header__close">
+            <button
+              className="header__close"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <img src="./images/close.svg" alt="close" />
             </button>
           </div>
@@ -83,7 +95,10 @@ export const Header = () => {
                 />
               </svg>
             </a>
-            <button className="header__btn invitation">
+            <button
+              className="header__btn invitation"
+              onClick={() => setIsModalOpen(true)}
+            >
               <div>Join us</div>
             </button>
             <div className="header__menu_links">
@@ -100,7 +115,10 @@ export const Header = () => {
           </div>
         </div>
         <div className="header__info">
-          <button className="header__info_burger">
+          <button
+            className="header__info_burger"
+            onClick={() => setIsMenuOpen(true)}
+          >
             <img src="./images/burger.svg" alt="burger" />
           </button>
           {/* <button className="header__info_join promo__button">Join us</button> */}

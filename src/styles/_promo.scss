@@ -9,6 +9,7 @@
   }
   &__button {
     position: relative;
+    cursor: pointer;
     &:hover::after {
       opacity: 1;
       color: #fff;

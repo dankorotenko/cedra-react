@@ -1,4 +1,8 @@
-export const Launch = () => {
+export const Launch = ({
+  setIsModalOpen,
+}: {
+  setIsModalOpen: (isModalOpen: boolean) => void;
+}) => {
   return (
     <section className="launch">
       <div className="container">
@@ -27,7 +31,10 @@ export const Launch = () => {
               <div>Community Participation</div>
             </div>
           </div>
-          <button className="jelly-button promo__button invitation">
+          <button
+            className="jelly-button promo__button invitation"
+            onClick={() => setIsModalOpen(true)}
+          >
             Request To Join
           </button>
         </div>

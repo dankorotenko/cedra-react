@@ -7,19 +7,23 @@ import { Blockchain } from "./components/Blockchain";
 import { Launch } from "./components/Launch";
 import { Join } from "./components/Join";
 import { Move } from "./components/Move";
+import { Modal } from "./components/Modal";
+import { useState } from "react";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <Header />
+      <Header setIsModalOpen={setIsModalOpen} />
       <Promo />
       <Info />
-      <Public />
+      <Public setIsModalOpen={setIsModalOpen} />
       <Protocol />
       <Blockchain />
-      <Launch />
+      <Launch setIsModalOpen={setIsModalOpen} />
       <Join />
       <Move />
+      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
   );
 }

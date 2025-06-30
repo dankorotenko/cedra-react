@@ -36,9 +36,9 @@ export const Join = () => {
                   <path
                     d="M15 10.1802L20 15.1802M20 15.1802L15 20.1802M20 15.1802H8C6.93913 15.1802 5.92172 14.7587 5.17157 14.0086C4.42143 13.2585 4 12.241 4 11.1802V4.18018"
                     stroke="#010F3F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <a
@@ -60,9 +60,9 @@ export const Join = () => {
                   <path
                     d="M15 10.1802L20 15.1802M20 15.1802L15 20.1802M20 15.1802H8C6.93913 15.1802 5.92172 14.7587 5.17157 14.0086C4.42143 13.2585 4 12.241 4 11.1802V4.18018"
                     stroke="#010F3F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <a
@@ -97,9 +97,9 @@ export const Join = () => {
                   <path
                     d="M15 10.1802L20 15.1802M20 15.1802L15 20.1802M20 15.1802H8C6.93913 15.1802 5.92172 14.7587 5.17157 14.0086C4.42143 13.2585 4 12.241 4 11.1802V4.18018"
                     stroke="#010F3F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <a
@@ -121,9 +121,9 @@ export const Join = () => {
                   <path
                     d="M15 10.1802L20 15.1802M20 15.1802L15 20.1802M20 15.1802H8C6.93913 15.1802 5.92172 14.7587 5.17157 14.0086C4.42143 13.2585 4 12.241 4 11.1802V4.18018"
                     stroke="#010F3F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <div className="join__block_wrapper_title">Launch On Cedra</div>
@@ -152,9 +152,9 @@ export const Join = () => {
                   <path
                     d="M15 10.1802L20 15.1802M20 15.1802L15 20.1802M20 15.1802H8C6.93913 15.1802 5.92172 14.7587 5.17157 14.0086C4.42143 13.2585 4 12.241 4 11.1802V4.18018"
                     stroke="#010F3F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <div className="join__block_wrapper_title">
