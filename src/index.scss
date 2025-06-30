@@ -44,7 +44,7 @@
   }
   &__bg {
     background-color: #f7fcfe;
-    background-image: url("../images/404.png");
+    background-image: url("/images/404.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -180,7 +180,7 @@
   }
   .move {
     &__wrapper {
-      background-image: url("../images/move_med.png");
+      background-image: url("/images/move_med.png");
     }
     &__title {
       font-size: 50px;
@@ -522,7 +522,7 @@
       width: 100%;
       height: 100vh;
       background: #010f3f;
-      background-image: url("../images/header.png");
+      background-image: url("/images/header.png");
       background-repeat: no-repeat;
       background-position: top center;
       flex-direction: column;
@@ -872,7 +872,7 @@
   .move {
     height: 952px;
     &__wrapper {
-      background-image: url("../images/move_mobile.png");
+      background-image: url("move_mobile.png");
       background-position: center calc(100% - 100px);
     }
     &__subtitle {
@@ -883,7 +883,7 @@
   .notFound {
     min-height: 600px;
     &__bg {
-      background-image: url("../images/404_mob.png");
+      background-image: url("/images/404_mob.png");
     }
     &__title {
       font-size: 100px;
@@ -905,7 +905,7 @@
       font-size: 16px;
     }
     &__wrapper {
-      background-image: url("../images/move_mob2.png");
+      background-image: url("/images/move_mob2.png");
       background-size: contain;
       background-position: center calc(100% - 175px);
     }
