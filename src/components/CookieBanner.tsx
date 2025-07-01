@@ -80,10 +80,7 @@ export const CookieBanner = () => {
       <div className="cookie-banner-content">
         <p>
           We use cookies to improve your experience. Please select your
-          preferences.{" "}
-          <a href="/cookie-policy" target="_blank" rel="noopener noreferrer">
-            Cookie Policy
-          </a>
+          preferences. <a href="/cookie-policy">Cookie Policy</a>
         </p>
         {showPreferences && (
           <div className="cookie-preferences">

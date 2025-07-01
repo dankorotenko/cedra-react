@@ -1,32 +1,15 @@
-import { Header } from "./components/Header";
-import { Promo } from "./components/Promo";
-import { Info } from "./components/Info";
-import { Public } from "./components/Public";
-import { Protocol } from "./components/Protocol";
-import { Blockchain } from "./components/Blockchain";
-import { Launch } from "./components/Launch";
-import { Join } from "./components/Join";
-import { Move } from "./components/Move";
-import { Modal } from "./components/Modal";
-import { useState } from "react";
-import { CookieBanner } from "./components/CookieBanner";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import CookiePolicy from "./pages/CookiePolicy";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <>
-      <Header setIsModalOpen={setIsModalOpen} />
-      <Promo />
-      <Info />
-      <Public setIsModalOpen={setIsModalOpen} />
-      <Protocol />
-      <Blockchain />
-      <Launch setIsModalOpen={setIsModalOpen} />
-      <Join />
-      <Move />
-      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      <CookieBanner />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+      </Routes>
+    </Router>
   );
 }
 
