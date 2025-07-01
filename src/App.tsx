@@ -9,6 +9,7 @@ import { Join } from "./components/Join";
 import { Move } from "./components/Move";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
+import { CookieBanner } from "./components/CookieBanner";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       <Join />
       <Move />
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <CookieBanner />
     </>
   );
 }

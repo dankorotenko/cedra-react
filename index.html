@@ -41,6 +41,30 @@
       }
       gtag("js", new Date());
 
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+      });
+
+      (function () {
+        try {
+          const consentState = localStorage.getItem("cookie_consent");
+          if (consentState) {
+            const parsedConsent = JSON.parse(consentState);
+            if (window.gtag) {
+              window.gtag("consent", "update", {
+                analytics_storage: parsedConsent.analytics
+                  ? "granted"
+                  : "denied",
+                ad_storage: parsedConsent.marketing ? "granted" : "denied",
+              });
+            }
+          }
+        } catch (e) {
+          console.error("Could not parse cookie consent state.", e);
+        }
+      })();
+
       gtag("config", "G-QJ1YFC04H0");
     </script>
   </head>
