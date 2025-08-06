@@ -126,7 +126,13 @@ export const Join = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <div className="join__block_wrapper_title">Launch On Cedra</div>
+                <a
+                  href="https://tally.so/r/wk46zd"
+                  target="_blank"
+                  className="join__block_wrapper_title"
+                >
+                  Launch On Cedra
+                </a>
               </div>
             </div>
             <div className="join__block join__block_3">
