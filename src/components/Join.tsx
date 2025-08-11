@@ -42,11 +42,11 @@ export const Join = () => {
                   />
                 </svg>
                 <a
-                  href="https://github.com/cedra-labs/move-contract-examples"
+                  href="https://docs.cedra.network/"
                   target="_blank"
                   className="join__block_wrapper_title"
                 >
-                  Guides and Tutorial
+                  Documentation
                 </a>
               </div>
               <div className="join__block_wrapper">
@@ -66,11 +66,11 @@ export const Join = () => {
                   />
                 </svg>
                 <a
-                  href="https://docs.cedra.network/"
+                  href="https://github.com/cedra-labs/move-contract-examples"
                   target="_blank"
                   className="join__block_wrapper_title"
                 >
-                  Documentation
+                  Guides and Tutorial
                 </a>
               </div>
             </div>

@@ -602,7 +602,7 @@
         line-height: 24px;
         letter-spacing: -0.259px;
         width: 177px;
-        margin-top: 44px;
+        margin-top: 24px;
       }
       &_header {
         position: absolute;
@@ -660,6 +660,14 @@
         transform: translateX(0);
         transition: 0.5s ease-in-out;
       }
+    }
+    &__links {
+      margin-right: 0;
+      flex-direction: column;
+      gap: 12px;
+    }
+    &__socials {
+      display: none;
     }
     &__info {
       display: flex;
