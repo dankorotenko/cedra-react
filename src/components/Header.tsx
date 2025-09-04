@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useModal } from "../hooks/useModal";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
 
-export const Header = ({
-  setIsModalOpen,
-}: {
-  setIsModalOpen: (isModalOpen: boolean) => void;
-}) => {
+export const Header = () => {
+  const { openModal } = useModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="header">
       <div className="header__container">
-        <img src="./images/logo.svg" alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <div
           className={`header__menu ${isMenuOpen ? "header__menu_active" : ""}`}
         >
@@ -35,6 +37,7 @@ export const Header = ({
               alt="logo"
             />
             <div className="header__links">
+              <a href="/projects">Projects</a>
               <a href="https://docs.cedra.network/" target="_blank">
                 Documentation
               </a>
@@ -108,10 +111,7 @@ export const Header = ({
                 </svg>
               </a>
             </div>
-            <button
-              className="header__btn invitation"
-              onClick={() => setIsModalOpen(true)}
-            >
+            <button className="header__btn invitation" onClick={openModal}>
               <div>Join us</div>
             </button>
             <div className="header__menu_links">

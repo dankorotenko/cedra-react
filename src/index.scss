@@ -10,6 +10,8 @@
 @use "./styles/footer";
 @use "./styles/modal";
 @use "./styles/cookiebanner";
+@use "./styles/projects";
+@use "./styles/singleProject";
 
 * {
   font-family: "Inter", serif;
@@ -572,6 +574,7 @@
       padding: 16px 20px;
     }
     &__menu {
+      padding-bottom: 64px;
       position: fixed;
       top: 0;
       left: 0;
