@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Launch } from "../components/Launch";
 import { Move } from "../components/Move";
@@ -216,6 +216,22 @@ const Projects = () => {
     );
   }, [activeCategory, data]);
 
+  const availableCategories = useMemo(() => {
+    const list = data ?? [];
+    const present = new Set<ProjectCategory>();
+    list.forEach((p) => p.categories.forEach((c) => present.add(c)));
+    return ALL_CATEGORIES.filter((cat) => present.has(cat as ProjectCategory));
+  }, [data]);
+
+  useEffect(() => {
+    if (
+      activeCategory !== "All" &&
+      !availableCategories.includes(activeCategory as ProjectCategory)
+    ) {
+      setActiveCategory("All");
+    }
+  }, [activeCategory, availableCategories]);
+
   const frames = useMemo(() => {
     const result: Project[][] = [];
     for (let i = 0; i < filtered.length; i += 4) {
@@ -241,7 +257,7 @@ const Projects = () => {
               >
                 All
               </button>
-              {ALL_CATEGORIES.map((cat) => (
+              {availableCategories.map((cat) => (
                 <button
                   key={cat}
                   className={`projects__chip ${
@@ -262,10 +278,6 @@ const Projects = () => {
           ) : isError ? (
             <motion.div className="projects__grid">
               <div>Failed to load projects.</div>
-            </motion.div>
-          ) : filtered.length === 0 ? (
-            <motion.div className="projects__grid">
-              <div>There are no projects in this category.</div>
             </motion.div>
           ) : (
             <motion.div className="projects__grid">
