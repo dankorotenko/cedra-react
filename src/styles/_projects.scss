@@ -35,13 +35,15 @@
     color: #0852e7;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease,
+      border-left-color 0.2s ease;
     font-weight: 200;
     &:hover {
-      background: #e9f3ff;
+      background: rgba(8, 82, 231, 0.08);
+      font-weight: 300;
     }
     &_active {
-      background: #0852e71a;
+      background: rgba(8, 82, 231, 0.14);
       font-weight: 400;
       border-left: 2px solid #0853e8;
     }
@@ -68,15 +70,21 @@
     background: transparent;
     transition: background 0.2s ease;
     &:hover {
-      background: #e9f3ff;
+      background: rgba(8, 82, 231, 0.09);
+      .projects__name {
+        font-weight: 300;
+      }
+      .projects__links a {
+        opacity: 0.85;
+      }
     }
     &:focus-visible {
-      box-shadow: 0 0 0 3px rgba(8, 82, 231, 0.25);
+      background: rgba(8, 82, 231, 0.12);
     }
   }
 
   &__row_inner {
-    padding: 44px 0;
+    padding: 44px 24px 44px 0;
     display: grid;
     grid-template-columns: 220px 1fr 360px;
     gap: 40px;
@@ -150,12 +158,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
       color: #0852e7;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.2s ease, background 0.2s ease, transform 0.2s ease;
       &:hover {
-        opacity: 0.75;
+        opacity: 1;
+        background: rgba(8, 82, 231, 0.1);
+        transform: translateY(-1px);
+      }
+      &:focus-visible {
+        opacity: 1;
+        background: rgba(8, 82, 231, 0.12);
       }
       svg {
         width: 20px;
@@ -173,7 +188,7 @@
     }
     &__row_inner {
       grid-template-columns: 180px 1fr 320px;
-      padding: 36px 0;
+      padding: 36px 24px 36px 0;
     }
     &__name {
       font-size: 42px;
@@ -183,7 +198,7 @@
     &__row_inner {
       grid-template-columns: 160px 1fr 260px;
       gap: 28px;
-      padding: 28px 0;
+      padding: 28px 20px 28px 0;
     }
     &__logo_wrap {
       width: 120px;
@@ -213,7 +228,7 @@
     &__row_inner {
       grid-template-columns: 1fr;
       gap: 18px;
-      padding: 26px 0;
+      padding: 26px 16px 26px 0;
       align-items: flex-start;
     }
     &__right {
@@ -239,7 +254,7 @@
       margin-top: 60px;
     }
     &__row_inner {
-      padding: 22px 0;
+      padding: 22px 14px 22px 0;
     }
     &__name {
       font-size: 34px;
