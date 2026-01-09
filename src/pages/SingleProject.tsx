@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { Move } from "../components/Move";
 import { useLayoutEffect, useMemo } from "react";
 import { useProjects } from "../hooks/useProjects";
+import fallbackLogo from "../assets/logo.svg";
 
 const SingleProject = () => {
   const { slug } = useParams();
@@ -196,7 +197,7 @@ const SingleProject = () => {
                 <div className="singleProject__right">
                   <div className="singleProject__logoCard">
                     <img
-                      src={project.logo || "/images/logo.svg"}
+                      src={project.logo || fallbackLogo}
                       alt={project.name}
                       className="singleProject__logo"
                       loading="lazy"
@@ -209,7 +210,7 @@ const SingleProject = () => {
                         )
                           return;
                         img.setAttribute("data-fallback-applied", "true");
-                        img.src = "/images/logo.svg";
+                        img.src = fallbackLogo;
                       }}
                     />
                   </div>

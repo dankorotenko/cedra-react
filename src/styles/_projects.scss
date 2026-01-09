@@ -46,94 +46,79 @@
       border-left: 2px solid #0853e8;
     }
   }
-  &__grid {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  &__frame {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    &:nth-child(2n) {
-      // border-left: none;
-    }
-    // > div:first-child {
-    //   border-bottom: none;
-    // }
-    // > div:nth-child(2) {
-    //   border-left: none;
-    // }
-    // > div:nth-child(3) {
-    //   border-right: none;
-    // }
-    // > div:nth-child(4) {
-    //   border-right: none;
-    // }
-  }
-  &__frame_focus {
-    aspect-ratio: 1 / 1;
-    grid-template-rows: 2fr 2fr;
-    grid-template-columns: 2fr 2fr;
-  }
-  .projects__frame_focus .projects__card {
-    aspect-ratio: auto;
-    height: 100%;
-  }
-  &__card {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-    border: 1px solid #0852e7;
-    cursor: pointer;
-  }
-  &__card_inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  &__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
-    height: auto;
-    object-fit: contain;
-    pointer-events: none;
-    z-index: 2;
-    transition: top 0.25s ease, left 0.25s ease, transform 0.25s ease;
-  }
-  &__hover {
-    position: absolute;
-    inset: 0;
-    padding: 40px;
+  &__list {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: flex-end;
-    background: #d4e8f6;
-    opacity: 0;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    z-index: 1;
+    border-top: 1px solid #0852e7;
   }
-  &__card:hover {
-    .projects__hover {
-      opacity: 1;
+
+  &__list_state {
+    margin-top: 100px;
+    color: #010f3f;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__row {
+    border-bottom: 1px solid #0852e7;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    transition: background 0.2s ease;
+    &:hover {
+      background: #e9f3ff;
     }
-    .projects__logo {
-      top: 40px;
-      left: 40px;
-      transform: none;
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgba(8, 82, 231, 0.25);
     }
   }
-  .projects__frame_focus:hover .projects__card:not(:hover) .projects__logo {
-    transform: translate(-50%, -50%) scale(0.7);
+
+  &__row_inner {
+    padding: 44px 0;
+    display: grid;
+    grid-template-columns: 220px 1fr 360px;
+    gap: 40px;
+    align-items: center;
   }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo_wrap {
+    width: 180px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__mid {
+    min-width: 0;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+  }
+
   &__name {
     color: #0853e8;
-    font-size: 36px;
-    font-weight: 300;
+    font-size: 48px;
+    font-weight: 200;
     line-height: 99%;
     letter-spacing: -4%;
   }
@@ -141,12 +126,14 @@
     color: #010f3f;
     font-size: 14px;
     line-height: 130%;
-    max-width: 490px;
+    max-width: 560px;
+    margin-top: 14px;
   }
   &__tags {
     display: flex;
     gap: 4px;
     flex-wrap: wrap;
+    justify-content: flex-end;
     span {
       font-size: 14px;
       padding: 6px 16px;
@@ -167,6 +154,9 @@
       height: 24px;
       color: #0852e7;
       transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.75;
+      }
       svg {
         width: 20px;
         height: 20px;
@@ -174,49 +164,37 @@
     }
   }
   @media screen and (max-width: 1520px) {
-    &__hover {
-      padding: 24px;
-    }
     &__logo {
-      width: 120px;
+      width: 140px;
     }
-    &__card:hover {
-      .projects__logo {
-        top: 24px;
-        left: 24px;
-      }
+    &__logo_wrap {
+      width: 140px;
+      height: 80px;
+    }
+    &__row_inner {
+      grid-template-columns: 180px 1fr 320px;
+      padding: 36px 0;
+    }
+    &__name {
+      font-size: 42px;
     }
   }
   @media screen and (max-width: 1200px) {
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
+    &__row_inner {
+      grid-template-columns: 160px 1fr 260px;
+      gap: 28px;
+      padding: 28px 0;
+    }
+    &__logo_wrap {
+      width: 120px;
+      height: 70px;
     }
     &__logo {
-      width: 100px;
+      width: 120px;
+      height: 70px;
     }
-    &__logo {
-      transition: none !important;
-    }
-    &__hover {
-      transition: none !important;
-    }
-    &__links {
-      a {
-        transition: none !important;
-      }
-    }
-    &__card:hover {
-      .projects__hover {
-        opacity: 0 !important;
-      }
-      .projects__logo {
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-      }
-    }
-    .projects__frame_focus:hover .projects__card:not(:hover) .projects__logo {
-      transform: translate(-50%, -50%) scale(1) !important;
+    &__name {
+      font-size: 36px;
     }
   }
   @media screen and (max-width: 991px) {
@@ -228,26 +206,46 @@
         font-size: 50px;
       }
     }
-    &__grid {
-      grid-template-columns: 1fr;
-    }
     &__section {
       margin-top: 37px;
       margin-bottom: 60px;
     }
+    &__row_inner {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 26px 0;
+      align-items: flex-start;
+    }
+    &__right {
+      align-items: flex-start;
+    }
+    &__tags {
+      justify-content: flex-start;
+    }
+    &__logo_wrap {
+      width: 160px;
+      height: 70px;
+    }
     &__logo {
-      width: 150px;
+      width: 160px;
+      height: 70px;
+    }
+    &__name {
+      font-size: 40px;
     }
   }
   @media screen and (max-width: 576px) {
-    &__grid {
-      grid-template-columns: 1fr;
+    &__list {
+      margin-top: 60px;
     }
-    &__card:hover {
-      grid-column: span 1;
+    &__row_inner {
+      padding: 22px 0;
     }
-    &__logo {
-      width: 100px;
+    &__name {
+      font-size: 34px;
+    }
+    &__desc {
+      max-width: none;
     }
   }
 }
