@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import { useModal } from "../hooks/useModal";
 
 const fadeIn: Variants = {
   hidden: { opacity: 0 },
@@ -12,11 +13,8 @@ const fadeIn: Variants = {
   }),
 };
 
-export const Public = ({
-  setIsModalOpen,
-}: {
-  setIsModalOpen: (isModalOpen: boolean) => void;
-}) => {
+export const Public = () => {
+  const { openModal } = useModal();
   return (
     <section className="public">
       <div className="container">
@@ -71,7 +69,7 @@ export const Public = ({
           </div>
           <button
             className="jelly-button promo__button invitation"
-            onClick={() => setIsModalOpen(true)}
+            onClick={openModal}
           >
             Join The Ecosystem
           </button>

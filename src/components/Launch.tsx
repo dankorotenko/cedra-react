@@ -1,8 +1,7 @@
-export const Launch = ({
-  setIsModalOpen,
-}: {
-  setIsModalOpen: (isModalOpen: boolean) => void;
-}) => {
+import { useModal } from "../hooks/useModal";
+
+export const Launch = () => {
+  const { openModal } = useModal();
   return (
     <section className="launch">
       <div className="container">
@@ -33,7 +32,7 @@ export const Launch = ({
           </div>
           <button
             className="jelly-button promo__button invitation"
-            onClick={() => setIsModalOpen(true)}
+            onClick={openModal}
           >
             Request To Join
           </button>
