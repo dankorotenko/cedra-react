@@ -134,7 +134,7 @@ const Projects = () => {
         <div className="container">
           <div className="projects__header">
             <h1>
-              Projects On <span>Cedra</span> Blockchain
+              Projects On <span>Cedra</span>
             </h1>
             <div className="projects__categories">
               <button
