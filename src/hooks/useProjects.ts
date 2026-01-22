@@ -47,7 +47,10 @@ async function fetchProjects(): Promise<Project[]> {
     throw new Error(`Failed to fetch projects: ${res.status}`);
   }
   const json = (await res.json()) as RemoteProject[];
-  return json.map(mapRemoteProject);
+  return json
+    .slice()
+    .sort((a, b) => a.id - b.id)
+    .map(mapRemoteProject);
 }
 
 export function useProjects() {
