@@ -3,7 +3,41 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 9;
+
+  &_onDark {
+
+    .header__menu:not(.header__menu_active) .header__links {
+      display: none;
+    }
+
+    .header__menu a,
+    .header__links a {
+      color: #edf6fa;
+    }
+
+    .header__btn {
+      color: #edf6fa;
+      border-color: #edf6fa;
+    }
+
+    .header__socials a {
+      color: #edf6fa;
+    }
+
+    .header__info_burger {
+      color: #edf6fa;
+    }
+  }
+
+  &__close {
+    color: #fff;
+  }
+
+  &__info_burger {
+    color: #010f3f;
+  }
+
   &__container {
     padding: 17px 0;
     max-width: 1482px;
@@ -12,9 +46,11 @@
     justify-content: space-between;
     margin: 0 auto;
   }
+
   &__menu {
     display: grid;
     place-items: flex-end;
+
     a {
       padding: 0 8px;
       color: #010f3f;
@@ -26,10 +62,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       &:hover {
         text-decoration: none;
       }
     }
+
     // button {
     //   width: 111px;
     //   height: 48px;
@@ -53,15 +91,18 @@
     &_wrapper {
       display: flex;
       align-items: center;
+
       &_logo {
         display: none;
       }
+
       &_link {
         svg {
           path {
             transition: 0.2s ease-in-out;
           }
         }
+
         &:hover {
           svg {
             path {
@@ -72,14 +113,18 @@
         }
       }
     }
+
     &_links {
       display: none;
     }
+
     &_header {
       display: none;
     }
+
     &_link {
       position: relative;
+
       &::after {
         content: "";
         width: 100%;
@@ -91,6 +136,7 @@
         border-radius: 50%;
         transition: 0.2s ease-in-out;
       }
+
       &:hover {
         &::after {
           background: #435fb9;
@@ -99,27 +145,37 @@
       }
     }
   }
+
   &__socials {
     display: flex;
     align-items: center;
     gap: 0;
+
+    a {
+      color: #0853e8;
+    }
   }
+
   &__links {
     display: flex;
     align-items: center;
     gap: 16px;
     margin-right: 30px;
+
     a {
       color: #010f3f;
       padding: 8px;
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
+
   &__info {
     display: none;
   }
+
   &__btn {
     background: transparent;
     color: #0853e8;

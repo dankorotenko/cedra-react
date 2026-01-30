@@ -1,0 +1,224 @@
+.blog {
+  background: #edf6fa;
+  padding-top: 80px;
+
+  &__section {
+    margin-top: 167px;
+    margin-bottom: 279px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__title {
+    font-size: 80px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    color: #0852e7;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  &__titleStrong {
+    font-weight: 400;
+  }
+
+  &__titleLight {
+    font-weight: 200;
+    opacity: 0.75;
+  }
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 680px;
+  }
+
+  &__chip {
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-left: 1px solid #0852e766;
+    color: #0852e7;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, font-weight 0.2s ease,
+      border-left-color 0.2s ease;
+    font-weight: 200;
+
+    &:hover {
+      background: rgba(8, 82, 231, 0.08);
+      font-weight: 300;
+    }
+
+    &_active {
+      background: rgba(8, 82, 231, 0.14);
+      font-weight: 400;
+      border-left: 2px solid #0853e8;
+    }
+  }
+
+  &__list {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #0852e7;
+  }
+
+  &__list_state {
+    margin-top: 100px;
+    color: #010f3f;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__row {
+    border-bottom: 1px solid #0852e7;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    transition: background 0.2s ease;
+    width: 100%;
+    text-align: left;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0;
+    display: block;
+
+    &:hover {
+      background: rgba(8, 82, 231, 0.09);
+
+
+      .blog__more {
+        opacity: 0.9;
+      }
+    }
+
+    &:focus-visible {
+      background: rgba(8, 82, 231, 0.12);
+    }
+  }
+
+  &__row_inner {
+    padding: 44px 24px 44px 0;
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  &__postTitle {
+    color: var(--Dark-Blue, #010F3F);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.28px;
+    max-width: 450px;
+  }
+
+  &__meta {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--Blue, #0852E7);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__pill {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-left: 2px solid var(--Blue, #0852E7);
+    background: rgba(8, 82, 231, 0.10);
+    color: var(--Blue, #0852E7);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 6px;
+  }
+
+  &__excerpt {
+    color: var(--Dark-Blue, #010F3F);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+  }
+
+  &__more {
+    color: var(--blue, #0853E8);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.259px;
+  }
+
+  @media screen and (max-width: 991px) {
+    &__section {
+      margin-top: 37px;
+      margin-bottom: 60px;
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__categories {
+      justify-content: flex-start;
+      max-width: 100%;
+    }
+
+    &__row_inner {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 26px 16px 26px 0;
+    }
+
+    &__right {
+      padding-top: 0;
+      max-width: 640px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__list {
+      margin-top: 60px;
+    }
+
+    &__postTitle {
+      font-size: 28px;
+    }
+  }
+}
