@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 import remarkGfm from "remark-gfm";
 import { Move } from "../components/Move";
-import { MoveBlogPost } from "../components/MoveBlogPost";
+
 import { useBlogPosts } from "../hooks/useBlogPosts";
 
 function formatMeta(dateISO: string, readTimeMinutes: number) {
